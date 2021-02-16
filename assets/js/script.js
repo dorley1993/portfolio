@@ -2,9 +2,12 @@ $(document).ready(function(){
 var i = 0;
 var txt = 'Hi! I am Danielle.'; /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
+var bttn = $(".show");
+
 
 
 function typeWriter() {
+    bttn.text("Resume");
   if (i < txt.length) {
     document.getElementById("title").innerHTML += txt.charAt(i);
     i++;
@@ -16,7 +19,7 @@ function skills() {
     var skill = $("#skills");
     skill.append(skillTitle);
 
-    var card = $('<div class="card ui raised padded segment cOne">');
+    var card = $('<div class="card ui raised padded segment cOne ">');
     var cardTitle = $('<h1 class="card-title row">').text("Frontend Technologies:");
     
     var row1 = $('<div class="row">');
@@ -121,14 +124,19 @@ function featuredProjects() {
     project3Col.append(project3picLink.append(div3Name));
 
     //button to more
-    
+    var btnDiv = $('<div class="row d-flex justify-content-center">')
+    var buttonMore = $('<button class="more">').text("More Projects!");
+
+    btnDiv.append(buttonMore)
 
     //appends it to the html
-    websites.append(project1Col, project2Col, project3Col);
+    websites.append(project1Col, project2Col, project3Col, btnDiv);
     
 }
 
-
+$('.show').on("click", function(){
+    $(".show").html("<i class='fas fa-download'></i>")
+})
 
 typeWriter();
 skills()

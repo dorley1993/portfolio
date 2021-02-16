@@ -107,6 +107,13 @@ a:hover {
     padding-top: 10px;
 }
 
+.email {
+    color: #737373 !important;
+    padding-top: 10px;
+}
+.email:hover {
+    color: rgb(190, 152, 221) !important;
+}
 /*social icons on footer style*/
 .social-icons li{
   display:inline-block;
@@ -120,8 +127,29 @@ a:hover {
     .social-icons {
         text-align: center;
     }
+    body > section > main > section > article > div > a > div > h3 {
+        font-size: 20px;
+    }
 
-
+    .more {
+        color: #fff !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: rgb(190, 152, 221);
+        padding: 10px;
+        border-radius: 5%;
+        display: inline-block;
+        border: none;
+        text-align: center;
+        transition: all 0.4s ease 0s;
+      }
+    
+    .more:hover {
+        text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.4s ease 0s;
+    }
 
 
 
@@ -132,8 +160,12 @@ a:hover {
 
 /*screens 299px and smaller, x-small*/
 @media screen and (max-width: 299px) {
+    .more {
+        font-size: 12px;
+    }
+
     #title {
-        font-size: 29px;
+        font-size: 34px;
         padding-top: 10px;
     }
     .img-me,
@@ -174,7 +206,7 @@ a:hover {
         color: rgb(134, 133, 133);
     }
     .projects {
-        margin-bottom: 40%;
+        margin-bottom: 60%;
     }
     .title-under {
         margin-bottom: 30%;
@@ -222,15 +254,138 @@ a:hover {
     }
     .websiteImg {
         padding: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
+    }
+    .lostP, 
+    .weather,
+    .schedular {
+        padding-top: 5px;
+    }
+    .social-icons {
+        padding: 0px;
+    }
+    #aboutme-text {
+        font-size: 16px;
+    }
+    .navbar-brand {
+        font-size: 16px;
     }
 
 }
 
-/*screens 300px to 400px, small*/
+/*screens 300px to 480px, small*/
 @media screen 
 and (min-width: 300px)
 and (max-width: 480px){
+    #title {
+        font-size: 39px;
+        padding-top: 10px;
+    }
+    #full-stack {
+        font-size: 1.2rem;
+    }
+
+    .wrapperHeader {
+        padding: 10px;
+    }
+
+    .img-me,
+    .title {
+        position: relative;
+        padding: 2em;
+        text-align: center;
+    }
+    #img-me {
+        height: 100%;
+        width: 100%;
+    }
+    .abt-me {
+        padding: 40px 10px 40px 10px;
+    }  
+    .title-skills,
+    .title-projects {
+        font-size: 2rem;
+        border-bottom: 1px solid rgb(190, 152, 221);
+        padding: 10px;
+    }
+    .title-skills,
+    .title-projects {
+        margin-bottom: 30px;
+    }
+    .card-title {
+        font-size: 1.8rem;
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(199, 195, 195);
+        color: rgb(134, 133, 133);
+    }
+    #skills {
+        padding: 10px 15px;
+        margin-bottom: 40px;
+    }
+    .cTwo {
+        margin-top: 10px;
+    }
+    body > section > main > section:nth-child(2) {
+        margin-top: 40px;
+    }
+    .cOne,
+    .cTwo {
+        padding: 20px;
+    }
+
+    #htmlT,
+    #cssT,
+    #jsT,
+    #gitT,
+    #vsT,
+    #termT {
+        display: inline;
+        padding: 10px;
+        font-size: 1.3rem;
+        color: rgb(134, 133, 133);
+    }
+
+   
+    .projects {
+        margin-bottom: 60%;
+    }
+    .title-under {
+        margin-bottom: 30%;
+    }
+    #lostNo,
+    #weather,
+    #workSched{
+        width: 420px;
+        height: auto;
+    }
+    .lostPtitle {
+        padding-left: 15px;
+    }
+    .wrapperHeader {
+        padding-bottom: 50px;
+    }
+    .github,
+    .linkedin,
+    .instagram {
+        height: 30px;
+        width: 30px;
+    }
+    .websiteImg {
+        padding: 0px;
+        margin-bottom: 25px;
+    }
+    .lostP, 
+    .weather,
+    .schedular {
+        padding-top: 5px;
+    }
+    .email{
+        font-size: 20px;
+    }
+    .social-icons {
+        padding: 0px;
+    }
+   
     .github,
     .linkedin,
     .instagram {
@@ -239,10 +394,121 @@ and (max-width: 480px){
     }
 }
 
-/*screens 401px and 768, medium*/
+/*screens 481px and 768, medium*/
 @media screen
 and (min-width: 481px)
 and (max-width: 768px) {
+    #title {
+        font-size: 4rem;
+        padding-top: 10px;
+    }
+    #full-stack {
+        font-size: 2rem;
+    }
+    .wrapperHeader {
+        padding: 10px;
+    }
+    .img-me,
+    .title {
+        position: relative;
+        padding: 2em;
+        text-align: center;
+    }
+    #img-me {
+        height: auto;
+        width: 80%;
+    }
+    .abt-me {
+        padding: 40px 20px;
+    }  
+    .title-skills,
+    .title-projects {
+        font-size: 2rem;
+        border-bottom: 1px solid rgb(190, 152, 221);
+        padding: 10px;
+    }
+    .title-skills,
+    .title-projects {
+        margin-bottom: 30px;
+    }
+    .card-title {
+        font-size: 1.8rem;
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(199, 195, 195);
+        color: rgb(134, 133, 133);
+    }
+    #skills {
+        padding: 10px 15px;
+        margin-bottom: 40px;
+    }
+    .cTwo {
+        margin-top: 10px;
+    }
+    body > section > main > section:nth-child(2) {
+        margin-top: 40px;
+    }
+    .cOne,
+    .cTwo {
+        padding: 20px;
+    }
+
+    #htmlT,
+    #cssT,
+    #jsT,
+    #gitT,
+    #vsT,
+    #termT {
+        display: inline;
+        padding: 10px;
+        font-size: 1.3rem;
+        color: rgb(134, 133, 133);
+    }
+
+   
+    .projects {
+        margin-bottom: 60%;
+    }
+    .title-under {
+        margin-bottom: 30%;
+    }
+    #lostNo,
+    #weather,
+    #workSched{
+        width: 540px;
+        height: auto;
+    }
+    .lostPtitle {
+        padding-left: 15px;
+    }
+    .wrapperHeader {
+        padding-bottom: 50px;
+    }
+    .github,
+    .linkedin,
+    .instagram {
+        height: 30px;
+        width: 30px;
+    }
+    .websiteImg {
+        padding: 0px;
+        margin-bottom: 25px;
+    }
+    .lostP, 
+    .weather,
+    .schedular {
+        padding-top: 5px;
+    }
+    .email{
+        font-size: 25px;
+    }
+    .social-icons {
+        padding: 0px;
+    }
+    .lostPtitle,
+    .weathT,
+    .workSched {
+        font-size: 2rem;
+    }
    
     .github,
     .linkedin,
@@ -257,12 +523,127 @@ and (max-width: 768px) {
 @media screen 
 and (min-width: 769px)
 and (max-width: 992px) {
-    
+    #title {
+        font-size: 5rem;
+        padding-top: 10px;
+    }
+    #full-stack {
+        font-size: 2rem;
+    }
+    .wrapperHeader {
+        padding: 10px;
+    }
+    .img-me,
+    .title {
+        position: relative;
+        padding: 2em;
+        text-align: center;
+    }
+    #img-me {
+        height: auto;
+        width: 80%;
+    }
+    .abt-me {
+        padding: 40px 20px;
+    }  
+    .title-skills,
+    .title-projects {
+        font-size: 2rem;
+        border-bottom: 1px solid rgb(190, 152, 221);
+        padding: 10px;
+    }
+    .title-skills,
+    .title-projects {
+        margin-bottom: 30px;
+    }
+    .card-title {
+        font-size: 1.8rem;
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(199, 195, 195);
+        color: rgb(134, 133, 133);
+    }
+    #skills {
+        padding: 40px 35px;
+        margin-bottom: 40px;
+    }
+    .cTwo {
+        margin-top: 10px;
+    }
+    body > section > main > section:nth-child(2) {
+        margin-top: 40px;
+    }
+    .cOne,
+    .cTwo {
+        padding: 20px;
+    }
+
+    #htmlT,
+    #cssT,
+    #jsT,
+    #gitT,
+    #vsT,
+    #termT {
+        display: inline;
+        padding: 10px;
+        font-size: 1.3rem;
+        color: rgb(134, 133, 133);
+    }
+
+   
+    .projects {
+        margin-bottom: 60%;
+        padding: 
+    }
+    .title-under {
+        margin-bottom: 30%;
+    }
+    #lostNo,
+    #weather,
+    #workSched{
+        width: 540px;
+        height: auto;
+    }
+    .lostPtitle {
+        padding-left: 15px;
+    }
+    .wrapperHeader {
+        padding-bottom: 50px;
+    }
+    .github,
+    .linkedin,
+    .instagram {
+        height: 30px;
+        width: 30px;
+    }
+    .websiteImg {
+        padding: 0px;
+        margin-bottom: 25px;
+    }
+    .lostP, 
+    .weather,
+    .schedular {
+        padding-top: 5px;
+    }
+    .email{
+        font-size: 25px;
+    }
+    .social-icons {
+        padding: 0px;
+    }
+    .lostPtitle,
+    .weathT,
+    .workSched {
+        font-size: 2rem;
+    }
+   
     .github,
     .linkedin,
     .instagram {
         height: 38px;
         width: 38px;
+    }
+    .navbar-brand {
+        font-size: 1.6rem;
     }
     
 }

@@ -19,7 +19,7 @@
     <section>
         <div class="backgroundImg">
         <!--Navbar with menu-->
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-light">
             <!--initials for navbar-brand, rounded-->
             <a class="navbar-brand" id="navbar-brand" href="#">DO</a>
 
@@ -29,7 +29,7 @@
                 <ul class="nav navbar-nav">
                     <!--Home Nav Link, index.html current-->
                     <li class="nav-item">
-                        <a class="nav-link custom-menu" href="#">Resume<span class="sr-only">(current)</span></a>
+                        <a download href="assets/resume copy.zip" class="nav-link custom-menu"><button class="more show"></button></a>
                     </li>
                 </ul>
             </div>
@@ -41,7 +41,7 @@
                 <article class="row">
                     <h1 class="title col-12" id="title"></h1>
                     <h1 class="title-under col-12" id="full-stack">Full Stack Web Developer</h1>
-                    <div class="img-me col-12"><img id="img-me" src="assets/images/me.JPEG"></div>
+                    <div class="img-me col-12"><img id="img-me" src="assets/images/me.JPEG" max-width="380px"></div>
                 </article>   
             </section>
         </header>
@@ -88,6 +88,10 @@
     <footer class="container-fluid custom-footer">
         <!--row 1, the whole footer-->
         <section class="row">
+            <article class="col-12">
+                <a href="mailto:daniorley1993@gmail.com" title= "Email Me" rel="me" 
+                target="_blank" class="d-flex justify-content-center email">daniorley1993@gmail.com</a>
+            </article>
             <!--Col 1, the copyright wording with name, date changes with javascript-->
             <article class="col-12">
                 <p class="copyright-text">Copyright &copy; <script>document.write(new Date().getFullYear())</script> <span id="name">Danielle Orley</span>
@@ -142,6 +146,18 @@
                           </svg>
                         </a>
                     </li>
+
+                    <li>
+                        <a class="instagram" href="#" target="_blank">
+                            <svg class="svg-inline--fa fa-envelope-square fa-w-14 fa-2x " aria-hidden="true" data-prefix="fas" data-icon="envelope-square" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" 
+                            data-fa-i2svg=""><path fill="currentColor" d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 
+                            48-48V80c0-26.51-21.49-48-48-48zM178.117 262.104C87.429 196.287 88.353 196.121 64 177.167V152c0-13.255 10.745-24 24-24h272c13.255 0 24 
+                            10.745 24 24v25.167c-24.371 18.969-23.434 19.124-114.117 84.938-10.5 7.655-31.392 26.12-45.883 25.894-14.503.218-35.367-18.227-45.883-25.895zM384 
+                            217.775V360c0 13.255-10.745 24-24 24H88c-13.255 0-24-10.745-24-24V217.775c13.958 10.794 33.329 25.236 95.303 70.214 14.162 10.341 37.975 32.145 
+                            64.694 32.01 26.887.134 51.037-22.041 64.72-32.025 61.958-44.965 81.325-59.406 95.283-70.199z"></path></svg>
+                          </a>
+                      </li>
                 </ul>
 
             </article>
