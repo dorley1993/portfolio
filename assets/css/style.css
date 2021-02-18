@@ -7,30 +7,74 @@
 /*makes it flow smoothly*/
 body {
     overflow: scroll;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 /*the hyperlinks color, important 
 to override the bootstrap components*/
-a,
-#title {
+/*Title on page*/
+a {
     color: rgb(190, 152, 221) !important;
 }
-
 /*hyperlinks color when hovered over*/
 a:hover {
     color: rgba(152, 103, 192, 0.432);
 }
 
-.title,
-.img-me {
+/*classes and id, css updates*/
+
+/*Title on page*/
+#title {
     position: relative;
-    padding: 2em;
     text-align: center;
+    padding: 0;
+    font-size: 5rem;
+    color: rgb(190, 152, 221);
 }
+/*makes img rounded*/
 #img-me {
     border-radius: 50%;
 }
+/*makes image have an outline when hovered on*/
+#img-me:hover {
+    border: 1px solid rgb(190, 152, 221);
+    padding: 5px;
+}
 
+
+/*skills, full-stack, title-projects color, alignment, and font-size*/
+#full-stack,
+.title-skills,
+.title-projects,
+#contact-me-custom {
+    color:rgb(190, 152, 221);
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*my initials on the navbar, font from google*/
+.navbar-brand {
+    background-color: rgb(190, 152, 221);
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+}
+/*makes the navbar transparent*/
+.navbar-inner {
+    background: transparent;
+    position: fixed;
+}
+/*creates the tech backgroung at top*/
+.backgroundImg {
+    background-image: url("../images/tech-background.png");  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: absolute; 
+}
+/*about me area wrapper, creates the background color*/
 .abt-me {
     margin: 0 !important;
     flex-direction: row;
@@ -42,57 +86,55 @@ a:hover {
     background-color: rgb(190, 152, 221);
     color: white;
 }
-#title {
-    font-size: 5rem;
-    padding: 0;
-}
-#full-stack,
+/*padding to skills and projects*/
 .title-skills,
 .title-projects {
-    color:rgb(190, 152, 221);
-    font-size: 1rem;
+    padding: 10px;
+}
+/*creates border for projects and skills*/
+.title-skills:after,
+.title-projects:after,
+#contact-me-custom:after {
+    content: ""; 
+    display: block; 
+    margin: 0 auto; 
+    width: 50%; 
+    padding-top: 20px; 
+    border-top: 1px solid rgb(190, 152, 221);
+}
+    .title-skills:before,
+    .title-projects:before,
+    #contact-me-custom:before    {
+        content: ""; 
+        display: block; 
+        margin: 0 auto; 
+        width: 50%; 
+        padding-top: 20px; 
+        border-bottom: 1px solid rgb(190, 152, 221);
+    }
+/*button for more projects, also resume button*/
+.more {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: rgb(190, 152, 221);
+    padding: 10px;
+    border-radius: 5%;
+    display: inline-block;
+    border: none;
     text-align: center;
+    transition: all 0.4s ease 0s;
 }
-.backgroundImg {
-    background-image: url("../images/tech-background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: absolute; 
+    .more:hover {
+        text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.4s ease 0s;
+    } 
+
+.contactWrapper {
+    margin-bottom: 30%;
 }
-
-
-
-
-
-/*makes the navbar transparent*/
-.navbar-inner {
-    background: transparent;
-    position: fixed;
-}
-/*my initials on the navbar*/
-.navbar-brand {
-    background-color: rgb(190, 152, 221);
-    color: rgb(255, 255, 255) !important;
-    font-weight: bold;
-    padding: 10px; 
-    border-radius: 50%;
-}
-
-
-
-
-
-/*makes image have an outline when hovered on*/
-#img-me:hover {
-    border: 1px solid rgb(190, 190, 190);
-    padding: 5px;
-}
-
-
-
-
-
-
 /*footer style*/
 .custom-footer {
     background-color:#26272b;
@@ -106,14 +148,15 @@ a:hover {
 .copyright-text {
     padding-top: 10px;
 }
-
+/*footer email link*/
 .email {
     color: #737373 !important;
     padding-top: 10px;
+    font-size: 1.4rem;
 }
-.email:hover {
-    color: rgb(190, 152, 221) !important;
-}
+    .email:hover {
+        color: rgb(190, 152, 221) !important;
+    }
 /*social icons on footer style*/
 .social-icons li{
   display:inline-block;
@@ -127,29 +170,8 @@ a:hover {
     .social-icons {
         text-align: center;
     }
-    body > section > main > section > article > div > a > div > h3 {
-        font-size: 20px;
-    }
 
-    .more {
-        color: #fff !important;
-        text-transform: uppercase;
-        text-decoration: none;
-        background: rgb(190, 152, 221);
-        padding: 10px;
-        border-radius: 5%;
-        display: inline-block;
-        border: none;
-        text-align: center;
-        transition: all 0.4s ease 0s;
-      }
-    
-    .more:hover {
-        text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-        transition: all 0.4s ease 0s;
-    }
+
 
 
 
@@ -160,19 +182,77 @@ a:hover {
 
 /*screens 299px and smaller, x-small*/
 @media screen and (max-width: 299px) {
+    .navbar-brand {
+        font-size: 16px;
+    }
     .more {
         font-size: 12px;
     }
-
-    #title {
-        font-size: 34px;
-        padding-top: 10px;
+    .title-under {
+        margin-bottom: 30%;
     }
-    .img-me,
-    .title {
+    .img-me{
         position: relative;
         padding: 2em;
         text-align: center;
+    }
+    .wrapperHeader {
+        padding-bottom: 50px;
+    }
+    .card {
+        padding: 10px;
+    }
+    .card-title {
+        font-size: 1.3rem;
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(199, 195, 195);
+        color: rgb(134, 133, 133);
+    }
+    .cTwo {
+        margin-top: 20px;
+    }
+    .cOne,
+    .cTwo {
+        padding: 20px;
+    }
+    
+
+    .projects {
+        margin-bottom: 60%;
+    }
+    .title-skills,
+    .title-projects {
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+    .websiteImg {
+        padding: 0px;
+        margin-bottom: 25px;
+    }
+    .lostP, 
+    .weather,
+    .schedular {
+        padding-top: 5px;
+        font-size: 12px;
+    }
+    .lostPtitle,
+    .weathT,
+    .workSched {
+        font-size: 20px;
+    }
+    .social-icons {
+        padding: 0px;
+    }
+    .github,
+    .linkedin,
+    .instagram {
+        height: 30px;
+        width: 30px;
+    }
+    
+    #title {
+        font-size: 34px;
+        padding-top: 10px;
     }
     #img-me {
         height: 100%;
@@ -181,13 +261,9 @@ a:hover {
     #full-stack {
         font-size: 1rem;
     }
-    .title-skills,
-    .title-projects {
-        font-size: 2rem;
-        border-bottom: 1px solid rgb(190, 152, 221);
-        padding: 10px;
+    #aboutme-text {
+        font-size: 16px;
     }
-
     #htmlT,
     #cssT,
     #jsT,
@@ -199,185 +275,55 @@ a:hover {
         font-size: 20px;
         color: rgb(134, 133, 133);
     }
-    .card-title {
-        font-size: 1.5rem;
-        padding: 10px 5px;
-        border-bottom: 1px solid rgb(199, 195, 195);
-        color: rgb(134, 133, 133);
-    }
-    .projects {
-        margin-bottom: 60%;
-    }
-    .title-under {
-        margin-bottom: 30%;
-    }
-    .card,
-    .wrapperHeader {
-        padding: 10px;
-    }
     #skills {
         padding: 10px 15px;
         margin-bottom: 40px;
     }
-    .title-skills,
-    .title-projects {
-        margin-bottom: 30px;
-    }
-    .cTwo {
-        margin-top: 10px;
-    }
-    body > section > main > section:nth-child(2) {
-        margin-top: 40px;
-    }
-    .cOne,
-    .cTwo {
-        padding: 20px;
-    }
-    
     #lostNo,
     #weather,
     #workSched{
         width: 270px;
         height: auto;
     }
-    .lostPtitle {
-        padding-left: 15px;
-    }
-    .wrapperHeader {
-        padding-bottom: 50px;
-    }
-    .github,
-    .linkedin,
-    .instagram {
-        height: 30px;
-        width: 30px;
-    }
-    .websiteImg {
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-    .lostP, 
-    .weather,
-    .schedular {
-        padding-top: 5px;
-    }
-    .social-icons {
-        padding: 0px;
-    }
-    #aboutme-text {
-        font-size: 16px;
-    }
-    .navbar-brand {
-        font-size: 16px;
-    }
-
+  
 }
 
 /*screens 300px to 480px, small*/
 @media screen 
 and (min-width: 300px)
 and (max-width: 480px){
-    #title {
-        font-size: 39px;
-        padding-top: 10px;
-    }
-    #full-stack {
-        font-size: 1.2rem;
-    }
-
     .wrapperHeader {
         padding: 10px;
     }
-
-    .img-me,
-    .title {
+    .img-me {
         position: relative;
         padding: 2em;
         text-align: center;
     }
-    #img-me {
-        height: 100%;
-        width: 100%;
+    
+    .wrapperHeader {
+        padding-bottom: 50px;
     }
-    .abt-me {
-        padding: 40px 10px 40px 10px;
-    }  
-    .title-skills,
-    .title-projects {
-        font-size: 2rem;
-        border-bottom: 1px solid rgb(190, 152, 221);
-        padding: 10px;
+    .websiteImg {
+        padding: 0px;
+        margin-bottom: 25px;
     }
-    .title-skills,
-    .title-projects {
-        margin-bottom: 30px;
-    }
-    .card-title {
-        font-size: 1.8rem;
-        padding: 10px 5px;
-        border-bottom: 1px solid rgb(199, 195, 195);
-        color: rgb(134, 133, 133);
-    }
-    #skills {
-        padding: 10px 15px;
-        margin-bottom: 40px;
-    }
-    .cTwo {
-        margin-top: 10px;
-    }
-    body > section > main > section:nth-child(2) {
-        margin-top: 40px;
-    }
-    .cOne,
-    .cTwo {
-        padding: 20px;
-    }
-
-    #htmlT,
-    #cssT,
-    #jsT,
-    #gitT,
-    #vsT,
-    #termT {
-        display: inline;
-        padding: 10px;
-        font-size: 1.3rem;
-        color: rgb(134, 133, 133);
-    }
-
-   
     .projects {
         margin-bottom: 60%;
     }
     .title-under {
         margin-bottom: 30%;
     }
-    #lostNo,
-    #weather,
-    #workSched{
-        width: 420px;
-        height: auto;
-    }
-    .lostPtitle {
-        padding-left: 15px;
-    }
-    .wrapperHeader {
-        padding-bottom: 50px;
-    }
-    .github,
-    .linkedin,
-    .instagram {
-        height: 30px;
-        width: 30px;
-    }
-    .websiteImg {
-        padding: 0px;
-        margin-bottom: 25px;
-    }
     .lostP, 
     .weather,
     .schedular {
         padding-top: 5px;
+        font-size: 15px;
+    }
+    .lostPtitle,
+    .weathT,
+    .workSched {
+        font-size: 20px;
     }
     .email{
         font-size: 20px;
@@ -392,6 +338,67 @@ and (max-width: 480px){
         height: 32px;
         width: 32px;
     }
+    .abt-me {
+        padding: 40px 10px 40px 10px;
+    }  
+    
+    .title-skills,
+    .title-projects {
+        margin-bottom: 30px;
+    }
+    .title-projects:after,
+    .title-projects:before { 
+        width: 90%; 
+    }
+    .card-title {
+        font-size: 1.8rem;
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(199, 195, 195);
+        color: rgb(134, 133, 133);
+    }
+    .cTwo {
+        margin-top: 10px;
+    }
+    body > section > main > section:nth-child(2) {
+        margin-top: 40px;
+    }
+    .cOne,
+    .cTwo {
+        padding: 20px;
+    }
+    #skills {
+        padding: 10px 15px;
+        margin-bottom: 40px;
+    }
+    #htmlT,
+    #cssT,
+    #jsT,
+    #gitT,
+    #vsT,
+    #termT {
+        display: inline;
+        padding: 10px;
+        font-size: 1.3rem;
+        color: rgb(134, 133, 133);
+    }
+    #lostNo,
+    #weather,
+    #workSched{
+        width: 320px;
+        height: auto;
+    }
+    #title {
+        font-size: 39px;
+        padding-top: 10px;
+    }
+    #full-stack {
+        font-size: 1.2rem;
+    }
+    #img-me {
+        height: 100%;
+        width: 100%;
+    }
+    
 }
 
 /*screens 481px and 768, medium*/
@@ -421,12 +428,7 @@ and (max-width: 768px) {
     .abt-me {
         padding: 40px 20px;
     }  
-    .title-skills,
-    .title-projects {
-        font-size: 2rem;
-        border-bottom: 1px solid rgb(190, 152, 221);
-        padding: 10px;
-    }
+  
     .title-skills,
     .title-projects {
         margin-bottom: 30px;
@@ -544,14 +546,12 @@ and (max-width: 992px) {
         width: 80%;
     }
     .abt-me {
-        padding: 40px 20px;
-    }  
-    .title-skills,
-    .title-projects {
-        font-size: 2rem;
-        border-bottom: 1px solid rgb(190, 152, 221);
-        padding: 10px;
+        padding: 50px 40px;
     }
+    .projectWrapper {
+        padding: 50px;
+    }
+    
     .title-skills,
     .title-projects {
         margin-bottom: 30px;
@@ -591,8 +591,7 @@ and (max-width: 992px) {
 
    
     .projects {
-        margin-bottom: 60%;
-        padding: 
+        margin-bottom: 30%;
     }
     .title-under {
         margin-bottom: 30%;
@@ -600,7 +599,7 @@ and (max-width: 992px) {
     #lostNo,
     #weather,
     #workSched{
-        width: 540px;
+        width: 740px;
         height: auto;
     }
     .lostPtitle {
@@ -646,15 +645,138 @@ and (max-width: 992px) {
         font-size: 1.6rem;
     }
     
+    
 }
 
 /*screen 993px and bigger, x-large*/
 @media screen and (min-width: 993px) {
+
+    #title {
+        font-size: 5rem;
+        padding-top: 10%;
+    }
+    #full-stack {
+        font-size: 2rem;
+        
+    }
+    .wrapperHeader {
+        margin: 0;
+    }
+    .img-me,
+    .title {
+        position: relative;
+        padding: 2em;
+        text-align: center;
+    }
+    #img-me {
+        height: auto;
+        width: 40%;
+    }
+    .abt-me {
+        padding: 50px 40px;
+        font-size: 20px;
+    }
+    .about-title,
+    .title-skills,
+    .title-projects {
+        font-size: 3rem;
+    }
+    .projectWrapper {
+        padding: 50px;
+    }
+   
+    .title-skills,
+    .title-projects {
+        margin-bottom: 30px;
+    }
+    .card-title {
+        font-size: 1.8rem;
+        padding: 10px 5px;
+        border-bottom: 1px solid rgb(199, 195, 195);
+        color: rgb(134, 133, 133);
+    }
+    #skills {
+        padding: 40px 35px;
+        margin-bottom: 40px;
+    }
+    .cOne {
+        margin: 0 0 0 10%;
+    }
+    .cTwo {
+        margin: 0 0 0 10%;
+    }
+    body > section > main > section:nth-child(2) {
+        margin-top: 40px;
+    }
+    .cOne,
+    .cTwo {
+        padding: 30px;
+    }
+
+    #htmlT,
+    #cssT,
+    #jsT,
+    #gitT,
+    #vsT,
+    #termT {
+        display: inline;
+        padding: 10px;
+        font-size: 1.3rem;
+        color: rgb(134, 133, 133);
+    }
+
+   
+    .projects {
+        margin-bottom: 30%;
+    }
+
+    .title-under {
+        margin-bottom: 10%;
+    }
+    #lostNo,
+    #weather,
+    #workSched{
+        width: 940px;
+        height: auto;
+    }
+    .lostPtitle {
+        padding-left: 15px;
+    }
+    .wrapperHeader {
+        padding-bottom: 50px;
+    }
+    .github,
+    .linkedin,
+    .instagram {
+        height: 30px;
+        width: 30px;
+    }
+    .websiteImg {
+        padding: 0px;
+        margin-bottom: 25px;
+    }
+    .lostP, 
+    .weather,
+    .schedular {
+        padding-top: 10px;
+    }
     
+    .social-icons {
+        padding: 0px;
+    }
+    .lostPtitle,
+    .weathT,
+    .workSched {
+        font-size: 2rem;
+    }
+   
     .github,
     .linkedin,
     .instagram {
         height: 40px;
         width: 40px;
     }
+   .websiteImg {
+       margin-left: 5%;
+   }
 }
