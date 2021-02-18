@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  window.scrollTo(0,0);
 
 //variables for typewriter effects
 var i = 0;
@@ -12,19 +13,18 @@ var navBrand = $(".navbar-brand");
 
 //creates brand
 navBrand.text("<DO>");
-
-
+bttn.text("Resume");
 
 
 //typewriting effect
 function typeWriter() {
-    bttn.text("Resume");
   if (i < txt.length) {
     document.getElementById("title").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
 }
+
 //creates the skills area
 function skills() {
     //skills title
@@ -94,7 +94,8 @@ function skills() {
     card2.append(rowT.append(rowPicT.append(nameT)));
 }
 
-//projects create area 
+
+//creates the projects area
 function featuredProjects() {
 
     //projects title
@@ -109,9 +110,9 @@ function featuredProjects() {
     var imageP1 = $('<img src="assets/images/lostNoMore.png" id="lostNo">');
     project1picLink.append(imageP1);
     //name underneath the pic with hyperlinks to repo and web
-    var divName = $('<div class="lostP row">')
+    var divName = $('<div class="lostP row d-flex justify-content-center">')
     var nameP = $('<h3 class="lostPtitle col-xs-9 col-s-9 col-md-9 col-lg-9 col-xl-8">').text('Lost No More')
-    var icon = $('<a class="col-3" target="_blank" href="https://github.com/obrienceob/LostNoMore"><i class="fab fa-github fa-2x"></i></a>');
+    var icon = $('<a class="col-2" target="_blank" href="https://github.com/obrienceob/LostNoMore"><i class="fab fa-github fa-2x"></i></a>');
     //appends it together
     divName.append(nameP, icon);
     project1Col.append(project1picLink.append(divName));
@@ -122,9 +123,9 @@ function featuredProjects() {
     var imageP2 = $('<img src="assets/images/weatherDashboard.png" id="weather">');
     project2picLink.append(imageP2);
     //adds the name underneath with github link, both hyperlinks.
-    var div2Name = $('<div class="weather row">')
-    var name2P = $('<h3 class="weathT col-xs-9 col-s-9 col-md-9 col-lg-9 col-xl-8">').text('Weather Dashboard')
-    var icon2 = $('<a class="col-3" target="_blank" href="https://github.com/dorley1993/Weather_Dashboard"><i class="fab fa-github fa-2x"></i></a>');
+    var div2Name = $('<div class="row weather d-flex justify-content-center">')
+    var name2P = $('<h3 class="weathT col-xs-8 col-s-2 col-md-9 col-lg-9 col-xl-8">').text('Weather Dashboard')
+    var icon2 = $('<a class="col-2" target="_blank" href="https://github.com/dorley1993/Weather_Dashboard"><i class="fab fa-github fa-2x"></i></a>');
     //appends it together
     div2Name.append(name2P, icon2);
     project2Col.append(project2picLink.append(div2Name));
@@ -135,9 +136,9 @@ function featuredProjects() {
     var imageP3 = $('<img src="assets/images/workSched.png" id="workSched">');
     project3picLink.append(imageP3);
     //adds the name underneath with github link, both hyperlinks.
-    var div3Name = $('<div class="schedular row">')
+    var div3Name = $('<div class="schedular row d-flex justify-content-center">')
     var name3P = $('<h3 class="workSched col-xs-4 col-sm-9 col-md-9 col-lg-9 col-xl-8">').text('Work Day Schedular')
-    var icon3 = $('<a class="col-4 workScedI" target="_blank" href="https://github.com/dorley1993/Schedule_Your_Day"><i class="fab fa-github fa-2x"></i></a>');
+    var icon3 = $('<a class="col-2 workScedI" target="_blank" href="https://github.com/dorley1993/Schedule_Your_Day"><i class="fab fa-github fa-2x"></i></a>');
     //appends it together
     div3Name.append(name3P, icon3);
     project3Col.append(project3picLink.append(div3Name));
@@ -156,29 +157,37 @@ function featuredProjects() {
 
 //function calls
 typeWriter();
-skills()
+skills();
 featuredProjects();
 
+//creates the more area
 $("#projBtn").on("click", function() {
-  console.log("hi");
+  //makes everything dissapear
   $("header").attr("style", "display: none");
   $(".abt-me").attr("style", "display: none");
   $("#skills").attr("style", "display: none");
   $(".backgroundImg").attr("style", "background-image: none");
 
+  //scrolls to top of window
+  window.scrollTo(0,0);
+
+  //creates the title to be just projects
+  $('.title-projects').addClass("nameChange");
   $('.title-projects').text('Projects');
+  //adds class to projects button new button
   $('#projBtn').addClass("newBtn");
-  
+  //then selects that button, changes text to HOME
   $('.newBtn').text("Home");
 
-
-
+  //window reload for the home button
   $(".newBtn").on("click", function() {
     window.location.reload();
+    window.scrollTo(0,0);
   });
 
 });
 
+//contact area
 $("#mail").on("click", function() {
   //makes everything, but the contact area dissapear
   $("header").attr("style", "display: none");
@@ -186,6 +195,10 @@ $("#mail").on("click", function() {
   $("#skills").attr("style", "display: none");
   $(".projectWrapper").attr("style", "display: none");
   $(".backgroundImg").attr("style", "background-image: none");
+  $("#mail").attr("style", "display: none");
+
+  $(".contactWrapper").attr("style", "display: inline");
+  window.scrollTo(0,0);
 
   //contact selector
   var contactForm = $(".contactForm");
@@ -214,6 +227,7 @@ $("#mail").on("click", function() {
   //appends it together
   inputArt3.append(inputComment, inputTextB3);
 
+  //submit button 
   var subBtn = $('<button type="submit" value="Send" class="more gform" id="custom-btn">').text("submit");
 
 
@@ -225,14 +239,11 @@ $("#mail").on("click", function() {
   var homeBtn = $('<button class="more" id="homeBtn">').text("Home");
   $(".homeBTN").append(homeBtn);
 
+  //home button click function
   $("#homeBtn").on("click", function(){
     window.location.reload();
+    window.scrollTo(0,0);
   })
-
-   
-    
-
-  contact.append(rowContHead, divHome);
 
    
 });

@@ -8,12 +8,14 @@
 body {
     overflow: scroll;
     font-family: 'Titillium Web', sans-serif;
+    height: 100%;
 }
 
 /*the hyperlinks color, important 
 to override the bootstrap components*/
 /*Title on page*/
-a {
+a,
+.email:hover {
     color: rgb(190, 152, 221) !important;
 }
 /*hyperlinks color when hovered over*/
@@ -31,19 +33,15 @@ a:hover {
     font-size: 5rem;
     color: rgb(190, 152, 221);
 }
+
 /*makes img rounded*/
 #img-me {
-    border-radius: 50%;
-}
-/*makes image have an outline when hovered on*/
-#img-me:hover {
+    border-radius: 50%; 
     border: 1px solid rgb(190, 152, 221);
     padding: 5px;
 }
 
-
-/*skills, full-stack, title-projects color, alignment, and font-size*/
-#full-stack,
+/*skills, title-projects color, alignment, and font-size*/
 .title-skills,
 .title-projects,
 #contact-me-custom {
@@ -91,6 +89,10 @@ a:hover {
 .title-projects {
     padding: 10px;
 }
+
+.main {
+    padding-bottom: 10%;
+}
 /*creates border for projects and skills*/
 .title-skills:after,
 .title-projects:after,
@@ -112,6 +114,7 @@ a:hover {
         padding-top: 20px; 
         border-bottom: 1px solid rgb(190, 152, 221);
     }
+
 /*button for more projects, also resume button*/
 .more {
     color: #fff !important;
@@ -134,6 +137,7 @@ a:hover {
 
 .contactWrapper {
     margin-bottom: 30%;
+    display: none;
 }
 /*footer style*/
 .custom-footer {
@@ -141,6 +145,7 @@ a:hover {
     left: 0;
     bottom: 0;
     width: 100%;
+    margin-bottom: -10px;
     color:#737373;
     position: fixed;
 }
@@ -152,11 +157,8 @@ a:hover {
 .email {
     color: #737373 !important;
     padding-top: 10px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
-    .email:hover {
-        color: rgb(190, 152, 221) !important;
-    }
 /*social icons on footer style*/
 .social-icons li{
   display:inline-block;
@@ -174,9 +176,6 @@ a:hover {
 
 
 
-
-
-
 /*media queries*/
 
 
@@ -188,16 +187,11 @@ a:hover {
     .more {
         font-size: 12px;
     }
-    .title-under {
-        margin-bottom: 30%;
-    }
-    .img-me{
-        position: relative;
-        padding: 2em;
-        text-align: center;
+    #title {
+        padding: 10% 0 30% 0;
     }
     .wrapperHeader {
-        padding-bottom: 50px;
+        padding-bottom: 30%;
     }
     .card {
         padding: 10px;
@@ -215,15 +209,13 @@ a:hover {
     .cTwo {
         padding: 20px;
     }
-    
-
-    .projects {
-        margin-bottom: 60%;
+    .title-projects:before,
+    .title-projects:after {
+        width: 100%;
     }
-    .title-skills,
-    .title-projects {
-        margin-bottom: 20px;
-        font-size: 2rem;
+    .nameChange:before,
+    .nameChange:after {
+        width: 70%;
     }
     .websiteImg {
         padding: 0px;
@@ -232,13 +224,14 @@ a:hover {
     .lostP, 
     .weather,
     .schedular {
-        padding-top: 5px;
-        font-size: 12px;
+        font-size: 10px;
+        text-align: center;
     }
     .lostPtitle,
     .weathT,
     .workSched {
-        font-size: 20px;
+        font-size: 18px;
+        text-align: center;
     }
     .social-icons {
         padding: 0px;
@@ -257,9 +250,6 @@ a:hover {
     #img-me {
         height: 100%;
         width: 100%;
-    }
-    #full-stack {
-        font-size: 1rem;
     }
     #aboutme-text {
         font-size: 16px;
@@ -724,7 +714,9 @@ and (max-width: 992px) {
         font-size: 1.3rem;
         color: rgb(134, 133, 133);
     }
-
+    body > section > main > section.container-fluid.contactWrapper > section > section > article > article > article.row.contactForm {
+        justify-content: center;
+    }
    
     .projects {
         margin-bottom: 30%;
