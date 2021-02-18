@@ -16,6 +16,8 @@ navBrand.text("<DO>");
 bttn.text("Resume");
 
 
+
+
 //typewriting effect
 function typeWriter() {
   if (i < txt.length) {
@@ -204,7 +206,7 @@ $("#mail").on("click", function() {
   var contactForm = $(".contactForm");
 
   //creates the form
-  var form = $('<form class="gform ol-xs-12 col-s-12 col-md-8 col-lg-6 col-xl-6 formC" method="POST" data-email="daniorley1993@gmail.com" action="https://script.google.com/macros/s/AKfycbwbt47-Gi36Pjs7KHkSNllbQHFOR2FdvsNExnrHKHsa9KrakTQ/exec">')
+  var form = $('<form class="gform ol-xs-12 col-s-12 col-md-8 col-lg-6 col-xl-6 formC" method="POST" id="formToSave" action="">')
 
   //creates input name area on form
   var inputArticle = $('<article class="form-group">');
@@ -226,14 +228,28 @@ $("#mail").on("click", function() {
   var inputTextB3 = $('<textarea class="form-control gform" name="message" rows="6" id="comment" placeholder="enter message here/optional">');
   //appends it together
   inputArt3.append(inputComment, inputTextB3);
-
+  
   //submit button 
-  var subBtn = $('<button type="submit" value="Send" class="more gform" id="custom-btn">').text("submit");
+  var subBtn = $('<button class="more" id="custom-btn">').text("submit");
+ 
 
 
   //appends everything together
   contactForm.append(form.append(inputArticle, inputArt2, inputArt3, subBtn));
 
+  $("#custom-btn").on("click", function(){
+    var name = $("#name");
+    var email = $("#email");
+    var comment = $("#comment");
+
+    let data =
+    '\r Name: ' + name.val() + ' \r\n ' + 
+    'Email: ' + email.val() + ' \r\n ' + 
+    'Comment: ' + comment.val();
+
+    localStorage.setItem(name.val(), data);
+  })
+  
   
   //button to more
   var homeBtn = $('<button class="more" id="homeBtn">').text("Home");
