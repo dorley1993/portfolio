@@ -148,7 +148,7 @@ function featuredProjects() {
 
     //button to more
     var btnDiv = $('<div class="row d-flex justify-content-center">')
-    var buttonMore = $('<button href="#nav" class="more" id="projBtn">').text("More Projects!");
+    var buttonMore = $('<button class="more" id="projBtn">').text("More Projects!");
     //append button
     btnDiv.append(buttonMore)
 
@@ -211,7 +211,7 @@ $("#mail").on("click", function() {
   var contactForm = $(".contactForm");
 
   //creates the form
-  var form = $('<form class="gform ol-xs-12 col-s-12 col-md-8 col-lg-6 col-xl-6 formC" method="POST" id="formToSave" action="">')
+  var form = $('<form class="gform ol-xs-12 col-s-12 col-md-8 col-lg-6 col-xl-6" method="POST" data-email="daniorley1993@gmail.com" action="https://script.google.com/macros/s/AKfycbwbt47-Gi36Pjs7KHkSNllbQHFOR2FdvsNExnrHKHsa9KrakTQ/exec">')
 
   //creates input name area on form
   var inputArticle = $('<article class="form-group">');
@@ -235,7 +235,7 @@ $("#mail").on("click", function() {
   inputArt3.append(inputComment, inputTextB3);
   
   //submit button 
-  var subBtn = $('<button class="more" id="custom-btn">').text("submit");
+  var subBtn = $('<button type="submit" value="Send" class="more gform" id="custom-btn">').text("submit");
  
 
 
@@ -287,7 +287,7 @@ $("#mail2").on("click", function() {
   var contactForm = $(".contactForm");
 
   //creates the form
-  var form = $('<form class="gform ol-xs-12 col-s-12 col-md-8 col-lg-6 col-xl-6 formC" method="POST" id="formToSave" action="">')
+  var form = $('<form class="gform ol-xs-12 col-s-12 col-md-8 col-lg-6 col-xl-6" method="POST" data-email="daniorley1993@gmail.com" action="https://script.google.com/macros/s/AKfycbwbt47-Gi36Pjs7KHkSNllbQHFOR2FdvsNExnrHKHsa9KrakTQ/exec">')
 
   //creates input name area on form
   var inputArticle = $('<article class="form-group">');
@@ -311,7 +311,7 @@ $("#mail2").on("click", function() {
   inputArt3.append(inputComment, inputTextB3);
   
   //submit button 
-  var subBtn = $('<button class="more" id="custom-btn">').text("submit");
+  var subBtn = $('<button type="submit" value="Send" class="more gform" id="custom-btn">').text("submit");
  
 
 
