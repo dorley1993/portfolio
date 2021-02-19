@@ -210,13 +210,17 @@ a:hover {
         padding: 20px;
     }
     .title-projects:before,
-    .title-projects:after {
+    .title-projects:after,
+    #contact-me-custom:before,
+    #contact-me-custom:after{
         width: 100%;
     }
     .nameChange:before,
     .nameChange:after {
         width: 70%;
     }
+    #contact-me-custom:before,
+    #contact-me-custom:after
     .websiteImg {
         padding: 0px;
         margin-bottom: 25px;
@@ -225,7 +229,7 @@ a:hover {
     .weather,
     .schedular {
         font-size: 10px;
-        text-align: center;
+        padding: 5% 9%;
     }
     .lostPtitle,
     .weathT,
@@ -242,7 +246,9 @@ a:hover {
         height: 30px;
         width: 30px;
     }
-    
+    .custom-footer {
+        position: relative;
+    }
     #title {
         font-size: 34px;
         padding-top: 10px;
@@ -283,7 +289,7 @@ a:hover {
 and (min-width: 300px)
 and (max-width: 480px){
     .wrapperHeader {
-        padding: 10px;
+        padding:4 10px;
     }
     .img-me {
         position: relative;
@@ -304,11 +310,21 @@ and (max-width: 480px){
     .title-under {
         margin-bottom: 30%;
     }
+    .title-projects:after,
+    .title-projects:before,
+    #contact-me-custom:before,
+    #contact-me-custom:after { 
+        width: 99%; 
+    }
+    .nameChange:before,
+    .nameChange:after {
+        width: 70%;
+    }
     .lostP, 
     .weather,
     .schedular {
-        padding-top: 5px;
-        font-size: 15px;
+        font-size: 14px;
+        padding: 5% 9%;
     }
     .lostPtitle,
     .weathT,
@@ -335,10 +351,6 @@ and (max-width: 480px){
     .title-skills,
     .title-projects {
         margin-bottom: 30px;
-    }
-    .title-projects:after,
-    .title-projects:before { 
-        width: 90%; 
     }
     .card-title {
         font-size: 1.8rem;
@@ -374,7 +386,7 @@ and (max-width: 480px){
     #lostNo,
     #weather,
     #workSched{
-        width: 320px;
+        width: 280px;
         height: auto;
     }
     #title {
@@ -418,7 +430,20 @@ and (max-width: 768px) {
     .abt-me {
         padding: 40px 20px;
     }  
-  
+    .title-projects:after,
+    .title-projects:before,
+    #contact-me-custom:before,
+    #contact-me-custom:after { 
+        width: 70%; 
+    }
+    .title-skills:after,
+    .title-skills:before {
+        width: 30%;
+    }
+    .nameChange:before,
+    .nameChange:after {
+        width: 30%;
+    }
     .title-skills,
     .title-projects {
         margin-bottom: 30px;
@@ -466,7 +491,7 @@ and (max-width: 768px) {
     #lostNo,
     #weather,
     #workSched{
-        width: 540px;
+        width: 500px;
         height: auto;
     }
     .lostPtitle {
@@ -634,6 +659,20 @@ and (max-width: 992px) {
     .navbar-brand {
         font-size: 1.6rem;
     }
+    .title-projects:after,
+    .title-projects:before,
+    #contact-me-custom:before,
+    #contact-me-custom:after { 
+        width: 50%; 
+    }
+    .title-skills:after,
+    .title-skills:before {
+        width: 20%;
+    }
+    .nameChange:before,
+    .nameChange:after {
+        width: 30%;
+    }
     
     
 }
@@ -770,5 +809,17 @@ and (max-width: 992px) {
     }
    .websiteImg {
        margin-left: 5%;
+   }
+   #contact-me-custom:before,
+   #contact-me-custom:after {
+       width: 30%;
+   }
+   .title-skills:after,
+   .title-skills:before {
+       width: 18%;
+   }
+   .nameChange:before,
+   .nameChange:after {
+       width: 30%;
    }
 }

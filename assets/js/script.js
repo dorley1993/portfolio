@@ -3,8 +3,8 @@ $(document).ready(function(){
 
 //variables for typewriter effects
 var i = 0;
-var txt = 'Hi! I am Danielle.'; /* The text */
-var speed = 70; /* The speed/duration of the effect in milliseconds */
+var txt = 'Hi! I am Danielle.'; 
+var speed = 70; 
 
 //selectors
 var bttn = $(".show");
@@ -112,8 +112,8 @@ function featuredProjects() {
     var imageP1 = $('<img src="assets/images/lostNoMore.png" id="lostNo">');
     project1picLink.append(imageP1);
     //name underneath the pic with hyperlinks to repo and web
-    var divName = $('<div class="lostP row d-flex justify-content-center">')
-    var nameP = $('<h3 class="lostPtitle col-xs-9 col-s-9 col-md-9 col-lg-9 col-xl-8">').text('Lost No More')
+    var divName = $('<div class="lostP row">')
+    var nameP = $('<h3 class="lostPtitle">').text('Lost No More')
     var icon = $('<a class="col-2" target="_blank" href="https://github.com/obrienceob/LostNoMore"><i class="fab fa-github fa-2x"></i></a>');
     //appends it together
     divName.append(nameP, icon);
@@ -125,8 +125,8 @@ function featuredProjects() {
     var imageP2 = $('<img src="assets/images/weatherDashboard.png" id="weather">');
     project2picLink.append(imageP2);
     //adds the name underneath with github link, both hyperlinks.
-    var div2Name = $('<div class="row weather d-flex justify-content-center">')
-    var name2P = $('<h3 class="weathT col-xs-8 col-s-2 col-md-9 col-lg-9 col-xl-8">').text('Weather Dashboard')
+    var div2Name = $('<div class="row weather">')
+    var name2P = $('<h3 class="weathT">').text('Weather Dashboard')
     var icon2 = $('<a class="col-2" target="_blank" href="https://github.com/dorley1993/Weather_Dashboard"><i class="fab fa-github fa-2x"></i></a>');
     //appends it together
     div2Name.append(name2P, icon2);
@@ -138,11 +138,12 @@ function featuredProjects() {
     var imageP3 = $('<img src="assets/images/workSched.png" id="workSched">');
     project3picLink.append(imageP3);
     //adds the name underneath with github link, both hyperlinks.
-    var div3Name = $('<div class="schedular row d-flex justify-content-center">')
-    var name3P = $('<h3 class="workSched col-xs-4 col-sm-9 col-md-9 col-lg-9 col-xl-8">').text('Work Day Schedular')
+    var div3Name = $('<div class="schedular row">')
+    var name3P = $('<h3 class="workSched"><a class="workScedI" target="_blank" href="https://github.com/dorley1993/Schedule_Your_Day">');
+    name3P.text('Work Day Schedular');
     var icon3 = $('<a class="col-2 workScedI" target="_blank" href="https://github.com/dorley1993/Schedule_Your_Day"><i class="fab fa-github fa-2x"></i></a>');
     //appends it together
-    div3Name.append(name3P, icon3);
+    div3Name.append(name3P, icon3)
     project3Col.append(project3picLink.append(div3Name));
 
     //button to more
@@ -169,6 +170,7 @@ $("#projBtn").on("click", function() {
   $(".abt-me").attr("style", "display: none");
   $("#skills").attr("style", "display: none");
   $(".backgroundImg").attr("style", "background-image: none");
+  $(".custom-footer").attr("style", "position: fixed");
 
   //scrolls to top of window
   window.scrollTo(0,0);
@@ -185,6 +187,7 @@ $("#projBtn").on("click", function() {
   $(".newBtn").on("click", function() {
     window.location.reload();
     window.scrollTo(0,0);
+    
   });
 
 });
@@ -198,6 +201,84 @@ $("#mail").on("click", function() {
   $(".projectWrapper").attr("style", "display: none");
   $(".backgroundImg").attr("style", "background-image: none");
   $("#mail").attr("style", "display: none");
+  $(".custom-footer").attr("style", "position: fixed");
+
+
+  $(".contactWrapper").attr("style", "display: inline");
+  window.scrollTo(0,0);
+
+  //contact selector
+  var contactForm = $(".contactForm");
+
+  //creates the form
+  var form = $('<form class="gform ol-xs-12 col-s-12 col-md-8 col-lg-6 col-xl-6 formC" method="POST" id="formToSave" action="">')
+
+  //creates input name area on form
+  var inputArticle = $('<article class="form-group">');
+  var inputName = $('<label for="info">').text("Name:");
+  var inputTextB = $('<input type="text" name="name" class="form-control gform" id="name" placeholder="enter name">');
+  //appends it together
+  inputArticle.append(inputName, inputTextB);
+
+  //creates input email area on form
+  var inputArt2 = $('<article class="form-group">');
+  var inputEmail = $('<label for="email">').text("Email:");
+  var inputTextB2 = $('<input type="email" name="email" class="form-control gform" id="email" placeholder="enter email" name="email">');
+  //appends it together
+  inputArt2.append(inputEmail, inputTextB2);
+
+  //creates input comment area on form
+  var inputArt3 = $('<article class="form-group">');
+  var inputComment = $('<label for="comment">').text("Comment:");
+  var inputTextB3 = $('<textarea class="form-control gform" name="message" rows="6" id="comment" placeholder="enter message here/optional">');
+  //appends it together
+  inputArt3.append(inputComment, inputTextB3);
+  
+  //submit button 
+  var subBtn = $('<button class="more" id="custom-btn">').text("submit");
+ 
+
+
+  //appends everything together
+  contactForm.append(form.append(inputArticle, inputArt2, inputArt3, subBtn));
+
+  $("#custom-btn").on("click", function(){
+    var name = $("#name");
+    var email = $("#email");
+    var comment = $("#comment");
+
+    let data =
+    '\r Name: ' + name.val() + ' \r\n ' + 
+    'Email: ' + email.val() + ' \r\n ' + 
+    'Comment: ' + comment.val();
+
+    localStorage.setItem(name.val(), data);
+  })
+  
+  
+  //button to more
+  var homeBtn = $('<button class="more" id="homeBtn">').text("Home");
+  $(".homeBTN").append(homeBtn);
+
+  //home button click function
+  $("#homeBtn").on("click", function(){
+    window.location.reload();
+    window.scrollTo(0,0);
+  })
+
+   
+});
+//contact area
+$("#mail2").on("click", function() {
+  //makes everything, but the contact area dissapear
+  $("header").attr("style", "display: none");
+  $(".abt-me").attr("style", "display: none");
+  $("#skills").attr("style", "display: none");
+  $(".projectWrapper").attr("style", "display: none");
+  $(".backgroundImg").attr("style", "background-image: none");
+  $("#mail").attr("style", "display: none");
+  $(".custom-footer").attr("style", "position: fixed");
+
 
   $(".contactWrapper").attr("style", "display: inline");
   window.scrollTo(0,0);
