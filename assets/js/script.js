@@ -187,7 +187,6 @@ $("#projBtn").on("click", function() {
   $(".newBtn").on("click", function() {
     window.location.reload();
     window.scrollTo(0,0);
-    
   });
 
 });
