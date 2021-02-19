@@ -252,7 +252,7 @@ $("#mail").on("click", function() {
     'Email: ' + email.val() + ' \r\n ' + 
     'Comment: ' + comment.val();
 
-    localStorage.setItem(name.val(), data);
+    localStorage.setItem("name", name.val());
   })
   
   
@@ -328,7 +328,7 @@ $("#mail2").on("click", function() {
     'Email: ' + email.val() + ' \r\n ' + 
     'Comment: ' + comment.val();
 
-    localStorage.setItem(name.val(), data);
+    localStorage.setItem("name", name.val());
   })
   
   
