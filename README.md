@@ -19,6 +19,7 @@ This is my portfolio. I wanted to create a portfolio to showcase some of my new 
         * local storage
         * creating elements with jquery
         * creating zip files for download
+        * contact forms
         
 url: https://dorley1993.github.io/portfolio/
 
@@ -42,21 +43,60 @@ url: https://dorley1993.github.io/portfolio/
 
 ## Usage
 ---
-Opening my website, you will see the main page, which contains my logo, resume button, name, picture of me, about me paragraph, skills, and my featured projects. Scroll smoothly down to view everything on this page. 
+Opening my website, you will see the main page, which contains my logo, resume button, name, picture of me, about me paragraph, skills, and my featured projects. Scroll smoothly down to view everything on this page.
 
 To download my resume, click on the resume button at the top.
-
-
+<br>
+<br>
+<img src="assets/images/readme/resume.gif" width="100%" alt="resume"/>
+<br>
+<br>
 You might notice that I created a typewriter effect for "Hi, I am Danielle", using javaScript. Introducing me. Below that is my picture. 
-
+<br>
+<br>
+<img src="assets/images/readme/start.gif" width="100%" alt="start"/>
+<br>
+<br>
 
 As you scroll down, you will come across a paragraph about me, then a list of the skills I've learned. 
 
+
 Scroll down more, to view my feature projects. These are the last three projects worked on. You can click the name underneath the image, this is a hyperlink for the website. The github icon, is a link to the repository for the project. 
+
+<br>
+<br>
+<img src="assets/images/readme/projects.gif" width="100%" alt="projects"/>
+<br>
+<br>
 
 Below the projects, is a more projects button. This clears the main area and presents the projects page. If you would like to go to the main area again, just click home. 
 
-On the footer, you will see my email and social links. The github, indeed, instagram, and a email icon. The email icon will bring you to my contact page. Where you can fill the information out. Once you submit this form, it saves the information directly to the local storage. 
+On the footer, you will see my email and social links. The github, indeed, instagram, and a email icon. The email icon will bring you to my contact page. Where you can fill the information out. Once you submit this form, it saves the name directly to local storage. It will send me the contact information through email.
+
+<br>
+<br>
+<img src="assets/images/readme/contact.gif" width="100%" alt="contact"/>
+<br>
+<br>
+
+<br>
+<br>
+<img src="assets/images/readme/saveForm.gif" width="100%" alt="contactForm"/>
+<br>
+<br>
+
+Once you submit you will see the following screen. You may click back to return to my website.
+<br>
+<br>
+<img src="assets/images/readme/contactFormSent.png" width="100%" alt="contactForm"/>
+
+## Credits
+---
+    I followed the following tutorial for my form, this will send directly to my email. You can find out more about this on the following link:
+
+    url: https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server#send-email-from-a-static-html-form-using-google-apps-mail
+
+    The tutorial is on the github website. 
 
 ## License
 ---
