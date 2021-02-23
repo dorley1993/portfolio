@@ -3,17 +3,29 @@
 * {
     scroll-behavior: smooth;
 }
-
-/*makes it flow smoothly*/
-body {
-    overflow: scroll;
-    font-family: 'Titillium Web', sans-serif;
-    height: 100%;
+h1,
+h2 {
+    color: rgb(190, 152, 221);
+    text-align: center;
 }
-
+h2 {
+    text-align: center;
+}
+/*Title on page*/
+#title {
+    position: relative;
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(190, 152, 221);
+}
+#lostNo,
+#weather,
+#workSched {
+    max-width: 400px;
+    height: auto;
+}
 /*the hyperlinks color, important 
 to override the bootstrap components*/
-/*Title on page*/
 a,
 .email:hover {
     color: rgb(190, 152, 221) !important;
@@ -22,34 +34,24 @@ a,
 a:hover {
     color: rgba(152, 103, 192, 0.432);
 }
-
-/*classes and id, css updates*/
-
-/*Title on page*/
-#title {
-    position: relative;
-    text-align: center;
-    padding: 0;
-    font-size: 5rem;
-    color: rgb(190, 152, 221);
+/*makes it flow smoothly*/
+body {
+    overflow: scroll;
+    font-family: 'Titillium Web', sans-serif;
 }
-
-/*makes img rounded*/
+/*makes image rounded and a border around it*/
 #img-me {
     border-radius: 50%; 
     border: 1px solid rgb(190, 152, 221);
     padding: 5px;
+    max-width: 400px;
 }
-
-/*skills, title-projects color, alignment, and font-size*/
-.title-skills,
-.title-projects,
-#contact-me-custom {
-    color:rgb(190, 152, 221);
-    text-align: center;
-    font-size: 2rem;
+/*center the email on the footer*/
+#emailFooter,
+.about-title {
+    display: flex;
+    justify-content: center;
 }
-
 /*my initials on the navbar, font from google*/
 .navbar-brand {
     background-color: rgb(190, 152, 221);
@@ -58,40 +60,11 @@ a:hover {
     padding: 10px;
     border-radius: 50%;
     font-family: 'Amatic SC', cursive;
-    font-size: 2rem;
 }
-/*makes the navbar transparent*/
-.navbar-inner {
-    background: transparent;
-    position: fixed;
-}
-/*creates the tech backgroung at top*/
-.backgroundImg {
-    background-image: url("../images/tech-background.png");  
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: absolute; 
-}
-/*about me area wrapper, creates the background color*/
 .abt-me {
-    margin: 0 !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    padding: 10px;
-    text-align: center;
-    width: 100% !important;
     background-color: rgb(190, 152, 221);
     color: white;
-}
-/*padding to skills and projects*/
-.title-skills,
-.title-projects {
     padding: 10px;
-}
-
-.main {
-    padding-bottom: 10%;
 }
 /*creates border for projects and skills*/
 .title-skills:after,
@@ -114,8 +87,6 @@ a:hover {
         padding-top: 20px; 
         border-bottom: 1px solid rgb(190, 152, 221);
     }
-
-/*button for more projects, also resume button*/
 .more {
     color: #fff !important;
     text-transform: uppercase;
@@ -134,10 +105,12 @@ a:hover {
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         transition: all 0.4s ease 0s;
     } 
-
-.contactWrapper {
-    margin-bottom: 30%;
-    display: none;
+/*creates the tech backgroung at top*/
+.backgroundImg {
+    background-image: url("../images/tech-background.png");  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: absolute; 
 }
 /*footer style*/
 .custom-footer {
@@ -149,677 +122,314 @@ a:hover {
     color:#737373;
     position: fixed;
 }
-/*COPYRIGHT text in footer*/
-.copyright-text {
-    padding-top: 10px;
-}
-/*footer email link*/
-.email {
-    color: #737373 !important;
-    padding-top: 10px;
-    font-size: 1.2rem;
-}
 /*social icons on footer style*/
 .social-icons li{
-  display:inline-block;
+    display: inline-block;
+    padding: 2px;
+  }
+      .social-icons a {
+          display: inline-block;
+          text-align: center;
+      }
+      .copyright-text,
+      .social-icons,
+      .abtMe {
+          text-align: center;
+          padding: 0 4px 0 0;
+      }
+.copyright-text {
+    padding: 3px;
+    margin: 0;
 }
-    .social-icons a {
-        display:inline-block;
-        text-align:center;
-        padding-right: 4px;
-    }
-    .copyright-text,
-    .social-icons {
-        text-align: center;
-    }
-
-
-
+.custom-paragraph {
+    text-align: center;
+}
 
 /*media queries*/
 
 
 /*screens 299px and smaller, x-small*/
 @media screen and (max-width: 299px) {
+    h4 {
+        font-size: 18px;
+    }
+    #img-me {
+        width: 280px;
+        display: flex;
+        justify-content: center;
+    }
+    #title {
+        font-size: 2.5rem;
+        padding: 28% 0;
+    }
+    #lostNo,
+    #weather,
+    #workSched {
+        width: 270px;
+    }
     .navbar-brand {
         font-size: 16px;
     }
-    .more {
-        font-size: 12px;
+    .projects {
+        padding: 10px 0;
     }
-    #title {
-        padding: 10% 0 30% 0;
-    }
-    .wrapperHeader {
-        padding-bottom: 30%;
-    }
-    .card {
-        padding: 10px;
-    }
-    .card-title {
-        font-size: 1.3rem;
-        padding: 10px 5px;
-        border-bottom: 1px solid rgb(199, 195, 195);
-        color: rgb(134, 133, 133);
-    }
-    .cTwo {
-        margin-top: 20px;
-    }
-    .cOne,
-    .cTwo {
-        padding: 20px;
-    }
-    .title-projects:before,
-    .title-projects:after,
-    #contact-me-custom:before,
-    #contact-me-custom:after{
-        width: 100%;
-    }
-    .nameChange:before,
-    .nameChange:after {
-        width: 70%;
-    }
-    #contact-me-custom:before,
-    #contact-me-custom:after
-    .websiteImg {
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-    .lostP, 
+    .lostP,
     .weather,
     .schedular {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+    }
+    .img-me {
+        padding: 20% 0;
+    }
+    .websiteImg {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .iconsP {
+        font-size: 9px;
+        padding: 0 5px;
+    }
+    .more {
         font-size: 10px;
-        padding: 5% 9%;
     }
-    .lostPtitle,
-    .weathT,
-    .workSched {
-        font-size: 18px;
-        text-align: center;
+    .contactWrapper {
+        padding: 0 0 40% 0;
     }
-    .social-icons {
-        padding: 0px;
-    }
-    .github,
-    .linkedin,
-    .instagram {
-        height: 30px;
-        width: 30px;
-    }
-    .custom-footer {
-        position: relative;
-    }
-    #title {
-        font-size: 34px;
-        padding-top: 10px;
-    }
-    #img-me {
-        height: 100%;
-        width: 100%;
-    }
-    #aboutme-text {
-        font-size: 16px;
-    }
-    #htmlT,
-    #cssT,
-    #jsT,
-    #gitT,
-    #vsT,
-    #termT {
-        display: inline;
-        padding: 10px;
-        font-size: 20px;
-        color: rgb(134, 133, 133);
-    }
-    #skills {
-        padding: 10px 15px;
-        margin-bottom: 40px;
-    }
-    #lostNo,
-    #weather,
-    #workSched{
-        width: 270px;
-        height: auto;
-    }
-  
 }
-
 /*screens 300px to 480px, small*/
 @media screen 
 and (min-width: 300px)
-and (max-width: 480px){
-    .wrapperHeader {
-        padding:4 10px;
+and (max-width: 480px) {
+    h4 {
+        font-size: 22px;
     }
-    .img-me {
-        position: relative;
-        padding: 2em;
-        text-align: center;
+    #img-me {
+        width: 280px;
+        display: flex;
+        justify-content: center;
     }
-    
-    .wrapperHeader {
-        padding-bottom: 50px;
-    }
-    .websiteImg {
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-    .projects {
-        margin-bottom: 60%;
-    }
-    .title-under {
-        margin-bottom: 30%;
-    }
-    .title-projects:after,
-    .title-projects:before,
-    #contact-me-custom:before,
-    #contact-me-custom:after { 
-        width: 99%; 
-    }
-    .nameChange:before,
-    .nameChange:after {
-        width: 70%;
-    }
-    .lostP, 
-    .weather,
-    .schedular {
-        font-size: 14px;
-        padding: 5% 9%;
-    }
-    .lostPtitle,
-    .weathT,
-    .workSched {
-        font-size: 20px;
-    }
-    .email{
-        font-size: 20px;
-    }
-    .social-icons {
-        padding: 0px;
-    }
-   
-    .github,
-    .linkedin,
-    .instagram {
-        height: 32px;
-        width: 32px;
-    }
-    .abt-me {
-        padding: 40px 10px 40px 10px;
-    }  
-    
-    .title-skills,
-    .title-projects {
-        margin-bottom: 30px;
-    }
-    .card-title {
-        font-size: 1.8rem;
-        padding: 10px 5px;
-        border-bottom: 1px solid rgb(199, 195, 195);
-        color: rgb(134, 133, 133);
-    }
-    .cTwo {
-        margin-top: 10px;
-    }
-    body > section > main > section:nth-child(2) {
-        margin-top: 40px;
-    }
-    .cOne,
-    .cTwo {
-        padding: 20px;
-    }
-    #skills {
-        padding: 10px 15px;
-        margin-bottom: 40px;
-    }
-    #htmlT,
-    #cssT,
-    #jsT,
-    #gitT,
-    #vsT,
-    #termT {
-        display: inline;
-        padding: 10px;
-        font-size: 1.3rem;
-        color: rgb(134, 133, 133);
+    #title {
+        font-size: 2.5rem;
+        padding: 28% 0;
     }
     #lostNo,
     #weather,
-    #workSched{
-        width: 280px;
-        height: auto;
+    #workSched {
+        width: 270px;
     }
-    #title {
-        font-size: 39px;
-        padding-top: 10px;
+    .navbar-brand {
+        font-size: 16px;
     }
-    #full-stack {
-        font-size: 1.2rem;
+    .projects {
+        padding: 10px 0;
     }
-    #img-me {
-        height: 100%;
-        width: 100%;
+    .lostP,
+    .weather,
+    .schedular {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+    }
+    .img-me {
+        padding: 20% 0;
+    }
+    .websiteImg {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .iconsP {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .more {
+        font-size: 10px;
+    }
+    .contactWrapper {
+        padding: 0 0 40% 0;
     }
     
 }
-
 /*screens 481px and 768, medium*/
 @media screen
 and (min-width: 481px)
 and (max-width: 768px) {
-    #title {
-        font-size: 4rem;
-        padding-top: 10px;
+    h4 {
+        font-size: 22px;
     }
-    #full-stack {
-        font-size: 2rem;
-    }
-    .wrapperHeader {
-        padding: 10px;
-    }
-    .img-me,
-    .title {
-        position: relative;
-        padding: 2em;
-        text-align: center;
+    h2 {
+        font-size: 3rem;
     }
     #img-me {
-        height: auto;
-        width: 80%;
+        width: 330px;
+        display: flex;
+        justify-content: center;
     }
-    .abt-me {
-        padding: 40px 20px;
-    }  
-    .title-projects:after,
-    .title-projects:before,
-    #contact-me-custom:before,
-    #contact-me-custom:after { 
-        width: 70%; 
-    }
-    .title-skills:after,
-    .title-skills:before {
-        width: 30%;
-    }
-    .nameChange:before,
-    .nameChange:after {
-        width: 30%;
-    }
-    .title-skills,
-    .title-projects {
-        margin-bottom: 30px;
-    }
-    .card-title {
-        font-size: 1.8rem;
-        padding: 10px 5px;
-        border-bottom: 1px solid rgb(199, 195, 195);
-        color: rgb(134, 133, 133);
-    }
-    #skills {
-        padding: 10px 15px;
-        margin-bottom: 40px;
-    }
-    .cTwo {
-        margin-top: 10px;
-    }
-    body > section > main > section:nth-child(2) {
-        margin-top: 40px;
-    }
-    .cOne,
-    .cTwo {
-        padding: 20px;
-    }
-
-    #htmlT,
-    #cssT,
-    #jsT,
-    #gitT,
-    #vsT,
-    #termT {
-        display: inline;
-        padding: 10px;
-        font-size: 1.3rem;
-        color: rgb(134, 133, 133);
-    }
-
-   
-    .projects {
-        margin-bottom: 60%;
-    }
-    .title-under {
-        margin-bottom: 30%;
+    #title {
+        font-size: 4rem;
+        padding: 28% 0;
     }
     #lostNo,
     #weather,
-    #workSched{
-        width: 500px;
-        height: auto;
+    #workSched {
+        width: 400px;
     }
-    .lostPtitle {
-        padding-left: 15px;
+    .navbar-brand {
+        font-size: 16px;
     }
-    .wrapperHeader {
-        padding-bottom: 50px;
+    .projects {
+        padding: 10px 0;
     }
-    .github,
-    .linkedin,
-    .instagram {
-        height: 30px;
-        width: 30px;
-    }
-    .websiteImg {
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-    .lostP, 
+    .lostP,
     .weather,
     .schedular {
-        padding-top: 5px;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
     }
-    .email{
-        font-size: 25px;
+    .img-me {
+        padding: 20% 0;
     }
-    .social-icons {
-        padding: 0px;
+    .abt-me {
+        padding: 5px;
     }
-    .lostPtitle,
-    .weathT,
-    .workSched {
-        font-size: 2rem;
+    .websiteImg {
+        padding: 0;
+        display: flex;
+        justify-content: center;
     }
-   
-    .github,
-    .linkedin,
-    .instagram {
-        height: 35px;
-        width: 35px;
+    .iconsP {
+        font-size: 12px;
+        padding: 0 5px;
     }
-    
+    .more {
+        font-size: 10px;
+    }
+    .contactWrapper {
+        padding: 0 0 40% 0;
+    }
 }
-
 /*screens 769px to 992px, large*/
 @media screen 
 and (min-width: 769px)
-and (max-width: 992px) {
-    #title {
-        font-size: 5rem;
-        padding-top: 10px;
+and (max-width: 992px) { 
+    h4 {
+        font-size: 23px;
     }
-    #full-stack {
-        font-size: 2rem;
-    }
-    .wrapperHeader {
-        padding: 10px;
-    }
-    .img-me,
-    .title {
-        position: relative;
-        padding: 2em;
-        text-align: center;
+    h2 {
+        font-size: 3.5rem;
     }
     #img-me {
-        height: auto;
-        width: 80%;
-    }
-    .abt-me {
-        padding: 50px 40px;
-    }
-    .projectWrapper {
-        padding: 50px;
-    }
-    
-    .title-skills,
-    .title-projects {
-        margin-bottom: 30px;
-    }
-    .card-title {
-        font-size: 1.8rem;
-        padding: 10px 5px;
-        border-bottom: 1px solid rgb(199, 195, 195);
-        color: rgb(134, 133, 133);
-    }
-    #skills {
-        padding: 40px 35px;
-        margin-bottom: 40px;
-    }
-    .cTwo {
-        margin-top: 10px;
-    }
-    body > section > main > section:nth-child(2) {
-        margin-top: 40px;
-    }
-    .cOne,
-    .cTwo {
-        padding: 20px;
-    }
-
-    #htmlT,
-    #cssT,
-    #jsT,
-    #gitT,
-    #vsT,
-    #termT {
-        display: inline;
-        padding: 10px;
-        font-size: 1.3rem;
-        color: rgb(134, 133, 133);
-    }
-
-   
-    .projects {
-        margin-bottom: 30%;
-    }
-    .title-under {
-        margin-bottom: 30%;
-    }
-    #lostNo,
-    #weather,
-    #workSched{
-        width: 740px;
-        height: auto;
-    }
-    .lostPtitle {
-        padding-left: 15px;
-    }
-    .wrapperHeader {
-        padding-bottom: 50px;
-    }
-    .github,
-    .linkedin,
-    .instagram {
-        height: 30px;
-        width: 30px;
-    }
-    .websiteImg {
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-    .lostP, 
-    .weather,
-    .schedular {
-        padding-top: 5px;
-    }
-    .email{
-        font-size: 25px;
-    }
-    .social-icons {
-        padding: 0px;
-    }
-    .lostPtitle,
-    .weathT,
-    .workSched {
-        font-size: 2rem;
-    }
-   
-    .github,
-    .linkedin,
-    .instagram {
-        height: 38px;
-        width: 38px;
-    }
-    .navbar-brand {
-        font-size: 1.6rem;
-    }
-    .title-projects:after,
-    .title-projects:before,
-    #contact-me-custom:before,
-    #contact-me-custom:after { 
-        width: 50%; 
-    }
-    .title-skills:after,
-    .title-skills:before {
-        width: 20%;
-    }
-    .nameChange:before,
-    .nameChange:after {
-        width: 30%;
-    }
-    
-    
-}
-
-/*screen 993px and bigger, x-large*/
-@media screen and (min-width: 993px) {
-
-    #title {
-        font-size: 5rem;
-        padding-top: 10%;
-    }
-    #full-stack {
-        font-size: 2rem;
-        
-    }
-    .wrapperHeader {
-        margin: 0;
-    }
-    .img-me,
-    .title {
-        position: relative;
-        padding: 2em;
-        text-align: center;
-    }
-    #img-me {
-        height: auto;
-        width: 40%;
-    }
-    .abt-me {
-        padding: 50px 40px;
-        font-size: 20px;
-    }
-    .about-title,
-    .title-skills,
-    .title-projects {
-        font-size: 3rem;
-    }
-    .projectWrapper {
-        padding: 50px;
-    }
-   
-    .title-skills,
-    .title-projects {
-        margin-bottom: 30px;
-    }
-    .card-title {
-        font-size: 1.8rem;
-        padding: 10px 5px;
-        border-bottom: 1px solid rgb(199, 195, 195);
-        color: rgb(134, 133, 133);
-    }
-    #skills {
-        padding: 40px 35px;
-        margin-bottom: 40px;
-    }
-    .cOne {
-        margin: 0 0 0 10%;
-    }
-    .cTwo {
-        margin: 0 0 0 10%;
-    }
-    body > section > main > section:nth-child(2) {
-        margin-top: 40px;
-    }
-    .cOne,
-    .cTwo {
-        padding: 30px;
-    }
-
-    #htmlT,
-    #cssT,
-    #jsT,
-    #gitT,
-    #vsT,
-    #termT {
-        display: inline;
-        padding: 10px;
-        font-size: 1.3rem;
-        color: rgb(134, 133, 133);
-    }
-    body > section > main > section.container-fluid.contactWrapper > section > section > article > article > article.row.contactForm {
+        width: 400px;
+        display: flex;
         justify-content: center;
     }
-   
-    .projects {
-        margin-bottom: 30%;
-    }
-
-    .title-under {
-        margin-bottom: 10%;
+    #title {
+        padding: 10% 0;
     }
     #lostNo,
     #weather,
-    #workSched{
-        width: 940px;
-        height: auto;
+    #workSched {
+        width: 400px;
     }
-    .lostPtitle {
-        padding-left: 15px;
+    .navbar-brand {
+        font-size: 19px;
     }
-    .wrapperHeader {
-        padding-bottom: 50px;
-    }
-    .github,
-    .linkedin,
-    .instagram {
-        height: 30px;
-        width: 30px;
-    }
-    .websiteImg {
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-    .lostP, 
-    .weather,
-    .schedular {
-        padding-top: 10px;
-    }
-    
-    .social-icons {
-        padding: 0px;
-    }
-    .lostPtitle,
-    .weathT,
-    .workSched {
+    .about-title {
         font-size: 2rem;
     }
-   
-    .github,
-    .linkedin,
-    .instagram {
-        height: 40px;
-        width: 40px;
+    .projects {
+        padding: 20px 0;
     }
-   .websiteImg {
-       margin-left: 5%;
-   }
-   #contact-me-custom:before,
-   #contact-me-custom:after {
-       width: 30%;
-   }
-   .title-skills:after,
-   .title-skills:before {
-       width: 18%;
-   }
-   .nameChange:before,
-   .nameChange:after {
-       width: 30%;
-   }
+    .lostP,
+    .weather,
+    .schedular {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+    }
+    .img-me {
+        padding: 10% 0;
+    }
+    .abt-me {
+        padding: 5px;
+    }
+    .websiteImg {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .iconsP {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .more {
+        font-size: 14px;
+    }
+    .contactWrapper {
+        padding: 0 0 40% 0;
+    }
+
+}
+/*screen 993px and bigger, x-large*/
+@media screen and (min-width: 993px) {
+    h4 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    #img-me {
+        width: 500px;
+        display: flex;
+        justify-content: center;
+    }
+    #title {
+        padding: 5% 0;
+    }
+    #lostNo,
+    #weather,
+    #workSched {
+        width: 600px;
+    }
+    .navbar-brand {
+        font-size: 19px;
+    }
+    .projects {
+        padding: 20px 0;
+    }
+    .lostP,
+    .weather,
+    .schedular {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+    }
+    .img-me {
+        padding: 5% 0;
+    }
+    .about-title {
+        font-size: 2rem;
+    }
+    .abt-me {
+        padding: 2% 25%;
+    }
+    .websiteImg {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .iconsP {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .more {
+        font-size: 16px;
+    }
+    .contactWrapper {
+        padding: 0 0 40% 0;
+    }
 }
